@@ -1,7 +1,12 @@
 <?php
 
+require "vendor/autoload.php";
+require "berlinClock.php";
 
-class berlinClockTest
+use berlinClock\berlinClock;
+use PHPUnit\Framework\TestCase;
+
+class berlinClockTest extends TestCase
 {
 
 }
