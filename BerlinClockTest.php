@@ -8,36 +8,39 @@ use PHPUnit\Framework\TestCase;
 
 class BerlinClockTest extends TestCase
 {
-    public function test_simpleMinutes_given1_shouldReturnYOOO(){
-        $berlinClock = new BerlinClock();
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->berlinClock = new BerlinClock();
+    }
 
-        $actual = $berlinClock->simpleMinutes(1);
+    public function test_simpleMinutes_given1_shouldReturnYOOO(){
+        $actual = $this->simpleMinutes(1);
 
         $this->assertEquals("YOOO",$actual);
 
     }
 
     public function test_simpleMinutes_given2_shouldReturnYYOO(){
-        $berlinClock = new BerlinClock();
-
-        $actual = $berlinClock->simpleMinutes(2);
+        $actual = $this->simpleMinutes(2);
 
         $this->assertEquals("YYOO",$actual);
     }
 
     public function test_simpleMinutes_given3_shouldReturnYYYO(){
-        $berlinClock = new BerlinClock();
-
-        $actual = $berlinClock->simpleMinutes(3);
+        $actual = $this->simpleMinutes(3);
 
         $this->assertEquals("YYYO",$actual);
     }
 
     public function test_simpleMinutes_given4_shouldReturnYYYY() {
-        $berlinClock = new BerlinClock();
-
-        $actual = $berlinClock->simpleMinutes(4);
+        $actual = $this->simpleMinutes(4);
 
         $this->assertEquals("YYYY",$actual);
     }
+
+    public function simpleMinutes(int $int): string {
+        return $this->berlinClock->simpleMinutes($int);
+    }
+
 }
