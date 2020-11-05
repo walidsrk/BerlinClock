@@ -40,10 +40,10 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("[OOOOOOOOOOO][YYYO]",$actual);
     }
 
-    public function test_simpleMinutes_given4_shouldReturnYYYY() {
-        $actual = $this->simpleMinutes(4);
+    public function test_given4_shouldReturnOOOOOOOOOOO_YYYY() {
+        $actual = $this->minutes(4);
 
-        $this->assertEquals("YYYY",$actual);
+        $this->assertEquals("[OOOOOOOOOOO][YYYY]",$actual);
     }
 
     public function simpleMinutes(int $int): string {
