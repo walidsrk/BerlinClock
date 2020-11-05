@@ -510,6 +510,12 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("[O]",$actual);
     }
 
+    public function test_given2second_shouldReturnR(){
+        $berlinClock = new BerlinClock();
+        $actual = $berlinClock->seconds(2);
+        $this->assertEquals("[R]",$actual);
+    }
+
     public function hours(int $int): string {
         return $this->berlinClock->hours($int);
     }
