@@ -16,5 +16,6 @@ class BerlinClock
     public function fiveMinutes(int $int):string
     {
         if($int === 5 || $int === 6) return "YOOOOOOOOOO";
+        if($int === 10) return "YYOOOOOOOOO";
     }
 }
