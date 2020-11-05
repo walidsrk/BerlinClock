@@ -50,4 +50,13 @@ class BerlinClock
     {
         if($int === 5) return "[ROOO]";
     }
+
+    public function hours(int $int):string
+    {
+        $simpleHours = $int%5;
+        $fiveHours = $int-$simpleHours;
+        $resultSimple = $this->simpleHours($simpleHours);
+        $resultFive = $this->fiveHours($fiveHours);
+        return $resultFive.$resultSimple;
+    }
 }
