@@ -28,4 +28,13 @@ class BerlinClock
         if($int === 55) return "YYRYYRYYRYY";
         return "OOOOOOOOOOO";
     }
+
+    public function minutes(int $int):string
+    {
+        $simpleMinutes = $int%5;
+        $fiveMinutes = $int-$simpleMinutes;
+        $resultSimple = $this->simpleMinutes($simpleMinutes);
+        $resultFive = $this->fiveMinutes($fiveMinutes);
+        return "[".$resultFive."][".$resultSimple."]";
+    }
 }
