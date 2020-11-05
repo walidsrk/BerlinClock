@@ -70,4 +70,12 @@ class BerlinClock
         if($int%2 != 0) return "[O]";
         return "[R]";
     }
+
+    public function clock(int $hour,int $minutes,int $seconds): string
+    {
+        $resultHour = $this->hours($hour);
+        $resultMinutes = $this->minutes($minutes);
+        $resultSeconds = $this->seconds($seconds);
+        return $resultSeconds.$resultHour.$resultMinutes;
+    }
 }
