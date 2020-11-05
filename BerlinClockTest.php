@@ -65,98 +65,78 @@ class BerlinClockTest extends TestCase
     }
 
     public function test_fiveMinutes_given6_shouldReturnYOOOOOOOOOO(){
-        $berlinClock = new BerlinClock();
-
-        $actual = $berlinClock->fiveMinutes(6);
+        $actual = $this->fiveMinutes(6);
 
         $this->assertEquals("YOOOOOOOOOO",$actual);
     }
 
     public function test_fiveMinutes_given10_shouldReturnYYOOOOOOOOO(){
-        $berlinClock = new BerlinClock();
-
-        $actual = $berlinClock->fiveMinutes(10);
+        $actual = $this->fiveMinutes(10);
 
         $this->assertEquals("YYOOOOOOOOO",$actual);
     }
 
     public function test_fiveMinutes_given15_shouldReturnYYROOOOOOOO(){
-        $berlinClock = new BerlinClock();
-
-        $actual = $berlinClock ->fiveMinutes(15);
+        $actual = $this ->fiveMinutes(15);
 
         $this->assertEquals("YYROOOOOOOO", $actual);
     }
 
     public function test_fiveMinutes_given20_shouldReturnYYRYOOOOOOO(){
-        $berlinClock = new BerlinClock();
-
-        $actual = $berlinClock ->fiveMinutes(20);
+        $actual = $this ->fiveMinutes(20);
 
         $this->assertEquals("YYRYOOOOOOO", $actual);
     }
 
     public function test_fiveMinutes_given25_shouldReturnYYRYYOOOOOO(){
-        $berlinClock = new BerlinClock();
-
-        $actual = $berlinClock ->fiveMinutes(25);
+        $actual = $this ->fiveMinutes(25);
 
         $this->assertEquals("YYRYYOOOOOO", $actual);
     }
 
     public function test_fiveMinutes_given30_shouldReturnYYRYYROOOOO(){
-        $berlinClock = new BerlinClock();
-
-        $actual = $berlinClock ->fiveMinutes(30);
+        $actual = $this ->fiveMinutes(30);
 
         $this->assertEquals("YYRYYROOOOO", $actual);
     }
 
     public function test_fiveMinutes_given35_shouldReturnYYRYYRYOOOO(){
-        $berlinClock = new BerlinClock();
-
-        $actual = $berlinClock ->fiveMinutes(35);
+        $actual = $this ->fiveMinutes(35);
 
         $this->assertEquals("YYRYYRYOOOO", $actual);
     }
 
     public function test_fiveMinutes_given40_shouldReturnYYRYYRYYOOO(){
-        $berlinClock = new BerlinClock();
-
-        $actual = $berlinClock ->fiveMinutes(40);
+        $actual = $this ->fiveMinutes(40);
 
         $this->assertEquals("YYRYYRYYOOO", $actual);
     }
 
     public function test_fiveMinutes_given45_shouldReturnYYRYYRYYROO(){
-        $berlinClock = new BerlinClock();
-
-        $actual = $berlinClock ->fiveMinutes(45);
+        $actual = $this ->fiveMinutes(45);
 
         $this->assertEquals("YYRYYRYYROO", $actual);
     }
 
     public function test_fiveMinutes_given50_shouldReturnYYRYYRYYRYO(){
-        $berlinClock = new BerlinClock();
-
-        $actual = $berlinClock ->fiveMinutes(50);
+        $actual = $this ->fiveMinutes(50);
 
         $this->assertEquals("YYRYYRYYRYO", $actual);
     }
 
     public function test_fiveMinutes_given55_shouldReturnYYRYYRYYRYY(){
-        $berlinClock = new BerlinClock();
-
-        $actual = $berlinClock ->fiveMinutes(55);
+        $actual = $this ->fiveMinutes(55);
 
         $this->assertEquals("YYRYYRYYRYY", $actual);
     }
 
     public function test_fiveMinutes_given0_shouldReturnOOOOOOOOOOO(){
-        $berlinClock = new BerlinClock();
-
-        $actual = $berlinClock ->fiveMinutes(0);
+        $actual = $this->fiveMinutes(0);
 
         $this->assertEquals("OOOOOOOOOOO", $actual);
+    }
+
+    public function fiveMinutes(int $int): string {
+        return $this->berlinClock->fiveMinutes($int);
     }
 }
