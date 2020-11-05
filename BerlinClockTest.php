@@ -312,6 +312,12 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("[YYRYYRYYRYO][YYYO]", $actual);
     }
 
+    public function test_given54_shouldReturnYYRYYRYYRYO_YYYY(){
+        $actual = $this ->minutes(54);
+
+        $this->assertEquals("[YYRYYRYYRYO][YYYY]", $actual);
+    }
+
     public function test_given55_shouldReturnYYRYYRYYRYY_OOOO(){
         $actual = $this ->minutes(55);
 
