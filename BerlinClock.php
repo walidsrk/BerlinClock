@@ -41,5 +41,6 @@ class BerlinClock
     public function hours(int $int):string
     {
         if($int === 1) return "[ROOO]";
+        if($int === 2) return "[RROO]";
     }
 }
