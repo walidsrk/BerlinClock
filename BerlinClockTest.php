@@ -519,7 +519,7 @@ class BerlinClockTest extends TestCase
 
     public function test_given24_00_shouldReturnRRRR_RRRR() {
         $actual = $this->hours(24);
-        
+
         $this->assertEquals("[RRRR][RRRR]",$actual);
     }
 
@@ -535,6 +535,17 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("[R]",$actual);
     }
 
+    public function test_seconde_all() {
+        for($i=0;$i<60;$i++) {
+            $actual = $this->seconds($i);
+            if($i%2 === 0) {
+                $this->assertEquals("[R]",$actual);
+            } else {
+                $this->assertEquals("[O]",$actual);
+            }
+        }
+    }
+
     public function hours(int $int): string {
         return $this->berlinClock->hours($int);
     }
@@ -546,4 +557,5 @@ class BerlinClockTest extends TestCase
     public function seconds(int $int):string{
         return $this->berlinClock->seconds($int);
     }
+
 }
