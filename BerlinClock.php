@@ -45,4 +45,9 @@ class BerlinClock
         if($int === 3) return "[RRRO]";
         if($int === 4) return "[RRRR]";
     }
+
+    public function fiveHours(int $int):string
+    {
+        if($int === 5) return "[ROOO]";
+    }
 }
