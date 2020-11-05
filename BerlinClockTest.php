@@ -422,10 +422,6 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("[RRRR][OOOO]",$actual);
     }
 
-    public function fiveHours(int $int) {
-        return $this->berlinClock->fiveHours($int);
-    }
-
     public function hours(int $int): string {
         return $this->berlinClock->hours($int);
     }
