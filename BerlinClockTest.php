@@ -56,11 +56,9 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("[YOOOOOOOOOO][OOOO]",$actual);
     }
 
-    public function test_given6_shouldReturnYOOO_YOOOOOOOOOO(){
-        $actual = $this->simpleMinutes(6);
-        $actual2 = $this->fiveMinutes(6);
-        $this->assertEquals("YOOO",$actual);
-        $this->assertEquals("YOOOOOOOOOO",$actual2);
+    public function test_given6_shouldReturnYOOOOOOOOOO_YOOO(){
+        $actual = $this->minutes(6);
+        $this->assertEquals("[YOOOOOOOOOO][YOOO]",$actual);
     }
 
     public function test_fiveMinutes_given10_shouldReturnYYOOOOOOOOO(){
