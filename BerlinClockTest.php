@@ -535,7 +535,7 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("[R]",$actual);
     }
 
-    public function test_seconde_all() {
+    public function test_second_all() {
         for($i=0;$i<60;$i++) {
             $actual = $this->seconds($i);
             if($i%2 === 0) {
