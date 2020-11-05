@@ -407,9 +407,51 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("[ROOO][ROOO]",$actual);
     }
 
+    public function test_given7_00_shouldReturnROOO_RROO()
+    {
+        $actual =$this->hours(7);
+        $this->assertEquals("[ROOO][RROO]",$actual);
+    }
+
+    public function test_given8_00_shouldReturnROOO_RRRO()
+    {
+        $actual =$this->hours(8);
+        $this->assertEquals("[ROOO][RRRO]",$actual);
+    }
+
+    public function test_given9_00_shouldReturnROOO_RRRR()
+    {
+        $actual =$this->hours(9);
+        $this->assertEquals("[ROOO][RRRR]",$actual);
+    }
+
     public function test_given10_00_shouldReturnRROO_OOOO() {
         $actual = $this->hours(10);
         $this->assertEquals("[RROO][OOOO]",$actual);
+    }
+
+    public function test_given11_00_shouldReturnRROO_ROOO()
+    {
+        $actual =$this->hours(11);
+        $this->assertEquals("[RROO][ROOO]",$actual);
+    }
+
+    public function test_given12_00_shouldReturnRROO_RROO()
+    {
+        $actual =$this->hours(12);
+        $this->assertEquals("[RROO][RROO]",$actual);
+    }
+
+    public function test_given13_00_shouldReturnRROO_RRRO()
+    {
+        $actual =$this->hours(13);
+        $this->assertEquals("[RROO][RRRO]",$actual);
+    }
+
+    public function test_given14_00_shouldReturnRROO_RRRR()
+    {
+        $actual =$this->hours(14);
+        $this->assertEquals("[RROO][RRRR]",$actual);
     }
 
     public function test_given15_00_shouldReturnRRRO_OOOO() {
