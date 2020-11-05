@@ -37,4 +37,9 @@ class BerlinClock
         $resultFive = $this->fiveMinutes($fiveMinutes);
         return "[".$resultFive."][".$resultSimple."]";
     }
+
+    public function hours(int $int):string
+    {
+        if($int === 1) return "[ROOO]";
+    }
 }
