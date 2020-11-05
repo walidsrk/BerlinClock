@@ -64,4 +64,10 @@ class BerlinClock
         $resultFive = $this->fiveHours($fiveHours);
         return $resultFive.$resultSimple;
     }
+
+    public function seconds(int $int):string
+    {
+        if($int%2 != 0) return "[O]";
+        return "[R]";
+    }
 }
