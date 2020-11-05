@@ -421,7 +421,7 @@ class BerlinClockTest extends TestCase
     }
 
     public function hours(int $int): string {
-        return $this->berlinClock->hours($int);
+        return $this->berlinClock->simpleHours($int);
     }
 
     public function minutes(int $int): string {
