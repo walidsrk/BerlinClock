@@ -38,7 +38,7 @@ class BerlinClock
         return "[".$resultFive."][".$resultSimple."]";
     }
 
-    public function simpleHours(int $int):string
+    private function simpleHours(int $int):string
     {
         if($int === 1) return "[ROOO]";
         if($int === 2) return "[RROO]";
@@ -47,7 +47,7 @@ class BerlinClock
         return "[OOOO]";
     }
 
-    public function fiveHours(int $int):string
+    private function fiveHours(int $int):string
     {
         if($int === 5) return "[ROOO]";
         if($int === 10) return "[RROO]";
