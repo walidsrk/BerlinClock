@@ -505,14 +505,14 @@ class BerlinClockTest extends TestCase
     }
 
     public function test_given1second_shouldReturnO(){
-        $berlinClock = new BerlinClock();
-        $actual = $berlinClock->seconds(1);
+        $actual = $this->seconds(1);
+
         $this->assertEquals("[O]",$actual);
     }
 
     public function test_given2second_shouldReturnR(){
-        $berlinClock = new BerlinClock();
-        $actual = $berlinClock->seconds(2);
+        $actual = $this->seconds(2);
+
         $this->assertEquals("[R]",$actual);
     }
 
@@ -522,5 +522,9 @@ class BerlinClockTest extends TestCase
 
     public function minutes(int $int): string {
         return $this->berlinClock->minutes($int);
+    }
+
+    public function seconds(int $int):string{
+        return $this->berlinClock->seconds($int);
     }
 }
